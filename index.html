@@ -138,22 +138,49 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-wrapper-inner">
-                                                            <div class="content-text">
-                                                                <div class="row">
-                                                                    <div class="col-text-outer">
-                                                                        <div class="row">
-                                                                            <div class="col-text-inner">
+                                                            <div class="row">
+                                                                <div class="col-outer">
+                                                                    <div class="row">
+                                                                        <div class="col-inner">
+                                                                            <div class="content-text">
                                                                                 <div class="subtitle">
                                                                                     <h4 class="text-subtitle primary text-mask-reveal">
                                                                                         .EP05
                                                                                     </h4>
-                                                                                </div>
+                                                                                </div>    
                                                                             </div>
-                                                                            <div class="col-text-inner">
+                                                                        </div>
+                                                                        <div class="col-inner">
+                                                                            <div class="content-text">
                                                                                 <div class="desc">
                                                                                     <p class="text-description text-mask-reveal">
                                                                                         In this episode, we talk with Alejandro Rodriguez-an accomplished runner and passionate coach known for blending discipline with heart. He opens up about his early days on the track, the setbacks that shaped him, and the lessons he now shares with the next generation of athletes.
                                                                                     </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="content-button">
+                                                                                <div class="button">
+                                                                                    <a class="btn btn-block btn-content btn-default btn-solid primary" href="#">
+                                                                                        <span class="wrapper">
+                                                                                            <span>
+                                                                                                <span class="text">
+                                                                                                    Listen Now
+                                                                                                </span>
+                                                                                            </span>
+                                                                                            <span>
+                                                                                                <span class="time">
+                                                                                                    30:48
+                                                                                                </span>
+                                                                                                <span class="icon">
+                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill"
+                                                                                                        viewBox="0 0 16 16">
+                                                                                                        <path
+                                                                                                            d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                                                                                                    </svg>
+                                                                                                </span>
+                                                                                            </span>
+                                                                                        </span>
+                                                                                    </a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -232,7 +259,7 @@
                                                                             <div class="col-wrapper-inner">
                                                                                 <div class="content-button">
                                                                                     <div class="button">
-                                                                                        <a class="btn btn-block btn-default btn-icon primary">
+                                                                                        <a class="btn btn-block btn-default btn-icon primary btn-magnetic">
                                                                                             <span class="wrapper">
                                                                                                 <span class="icon">
                                                                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill"
@@ -297,7 +324,7 @@
                                                                             <div class="col-wrapper-inner">
                                                                                 <div class="content-button">
                                                                                     <div class="button">
-                                                                                        <a class="btn btn-block btn-default btn-icon primary">
+                                                                                        <a class="btn btn-block btn-default btn-icon primary btn-magnetic">
                                                                                             <span class="wrapper">
                                                                                                 <span class="icon">
                                                                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill"
@@ -366,7 +393,7 @@
                                                                     <div class="col-wrapper-inner">
                                                                         <div class="list-button">
                                                                             <div class="button">
-                                                                                <a class="btn btn-block btn-default btn-icon primary">
+                                                                                <a class="btn btn-block btn-default btn-icon primary btn-magnetic">
                                                                                     <span class="wrapper">
                                                                                         <span class="icon">
                                                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill"
@@ -424,7 +451,7 @@
                                                                     <div class="col-wrapper-inner">
                                                                         <div class="list-button">
                                                                             <div class="button">
-                                                                                <a class="btn btn-block btn-default btn-icon primary">
+                                                                                <a class="btn btn-block btn-default btn-icon primary btn-magnetic">
                                                                                     <span class="wrapper">
                                                                                         <span class="icon">
                                                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill"
@@ -860,5 +887,28 @@
 
     <script src="assets/javascript/custom-select2.js"></script>
     <script src="assets/javascript/custom-javascript.js"></script>
+
+    <script>
+        var magnets = document.querySelectorAll('.btn-magnetic')
+        var strength = 35
+
+        magnets.forEach((magnet) => {
+            magnet.addEventListener('mousemove', moveMagnet);
+            magnet.addEventListener('mouseout', function (event) {
+                TweenMax.to(event.currentTarget, 1, { x: 0, y: 0, ease: Power4.easeOut })
+            });
+        });
+
+        function moveMagnet(event) {
+            var magnetButton = event.currentTarget
+            var bounding = magnetButton.getBoundingClientRect()
+
+            TweenMax.to(magnetButton, 1, {
+                x: (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * strength,
+                y: (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * strength,
+                ease: Power4.easeOut
+            })
+        }
+    </script>
 </body>
 </html>

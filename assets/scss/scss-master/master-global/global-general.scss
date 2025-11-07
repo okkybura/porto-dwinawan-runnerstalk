@@ -936,11 +936,12 @@ a, button {
 
         @include align-items-center;
 
+        @include py-2;
+        @include px-4;
+
         justify-content         : center;
 
-        padding                 : calc(20 / var(--vw) * var(--multiplier)) calc(50 / var(--vw) * var(--multiplier));
-
-        > span {
+        span {
             @include position-relative;
 
             &.icon {
@@ -969,9 +970,14 @@ a, button {
                         }
                     }
                 }
+
+                svg {
+                    width               : calc(22.5 / var(--vw) * var(--multiplier));
+                    height              : calc(22.5 / var(--vw) * var(--multiplier));
+                }
             }
 
-            &.text {
+            &.text, &.time {
                 @include display-block;
 
                 @include overflow-hidden;
@@ -1003,7 +1009,7 @@ a, button {
 
     &:hover {
         > span {
-            > span {
+            span {
                 &.icon { 
                     > span {
                         > i {
@@ -1018,7 +1024,7 @@ a, button {
                     }
                 }
 
-                &.text {
+                &.text, &.time {
                     > span {
                         &:nth-child(1) {
                             > span {
@@ -1048,73 +1054,95 @@ a, button {
     // Solid
 
     &.btn-solid {
-        background              : none;
-
-        border                  : none;
-        border-radius           : calc(0 / var(--vw) * var(--multiplier));
+        @include display-flex;
 
         > span {
-            &:before, &:after {
+            @include position-relative;
+            
+            @include display-flex;
+
+            @include align-items-center;
+
+            @include overflow-hidden;
+
+            @include width-100;
+
+            @include py-3;
+
+            justify-content         : space-between;
+
+            background              : var(--color-grey-super-light);
+
+            border                  : none;
+            border-radius           : 50em;
+
+            &:before {
                 @include position-absolute;
 
-                @include width-100;
-                @include height-100;
+                content             : '';
 
-                content                 : '';
+                width               : 100%;
+                height              : calc(75 / var(--vw) * var(--multiplier));
 
-                top                     : 0;
-                left                    : 0;
+                bottom              : -175%;
+                left                : 50%;
 
-                transform               : scale(1);
+                transform           : translateX(-50%);
+
+                background          : var(--color-black);
+
+                border-radius       : 100%;
+            }
+
+            > span {
+                @include display-flex;
+
+                @include align-items-center;
+
+                > span {
+                    @include mr-3;
+
+                    &:last-child {
+                        @include mr-0;
+                    }
+                }
+            }
+
+            span {
+                &.icon {
+                    @include mx-0;
+                    
+                    svg {
+                        fill                : var(--color-white);
+
+                        mix-blend-mode      : difference;
+                    }
+                }
+
+                &.text, &.time {
+                    > span {
+                        &:nth-child(1) {
+                            color           : var(--color-black);
+                        }
+
+                        &:nth-child(2) {
+                            color           : var(--color-white);
+                        }
+                    }
+                }
             }
         }
 
         &:hover {
             > span {
-                &:before, &:after {
-                    transform       : scale(0.95);
-                }
-            }
-        }
-
-        // Primary
-
-        &.btn-primary {
-            color                       : var(--color-black);
-
-            > span {
                 &:before {
-                    background          : var(--color-primary);
+                    @include height-100;
 
-                    box-shadow          : 0 0 0 calc(2 / var(--vw) * var(--multiplier)) var(--color-black) inset;
-                }
-            }
-        }
+                    width                   : 125%;
 
-        // Secondary
+                    bottom                  : 0;
 
-        &.btn-secondary {
-            color                       : var(--color-black);
-
-            > span {
-                &:before {
-                    background          : var(--color-secondary);
-
-                    box-shadow          : 0 0 0 calc(2 / var(--vw) * var(--multiplier)) var(--color-black) inset;
-                }
-            }
-        }
-
-        // Quarter
-
-        &.btn-light {
-            color               : var(--color-black);
-
-            > span {
-                &:before {
-                    background          : var(--color-white);
-
-                    box-shadow          : 0 0 0 calc(2 / var(--vw) * var(--multiplier)) var(--color-black) inset;
+                    border-radius           : 50em;
                 }
             }
         }
@@ -1124,7 +1152,66 @@ a, button {
 
     &.btn-icon {
         > span {
+            @include position-relative;
+            
+            @include display-inline-flex;
 
+            @include overflow-hidden;
+
+            @include align-items-center;
+
+            @include p-0;
+
+            justify-content             : center;
+
+            width                       : calc(50 / var(--vw) * var(--multiplier));
+            height                      : calc(50 / var(--vw) * var(--multiplier));
+
+            background                  : var(--color-grey-super-light);
+
+            border-radius               : 100%;
+
+            &:before {
+                @include position-absolute;
+
+                content             : '';
+
+                width               : 100%;
+                height              : calc(50 / var(--vw) * var(--multiplier));
+
+                bottom              : -100%;
+                left                : 50%;
+
+                transform           : translateX(-50%);
+
+                background          : var(--color-black);
+
+                border-radius       : 100%;
+            }
+
+            span {
+                &.icon {
+                    svg {
+                        mix-blend-mode      : difference;
+
+                        fill                : var(--color-white);
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            > span {
+                &:before {
+                    @include height-100;
+
+                    width                   : 125%;
+
+                    bottom                  : 0;
+
+                    border-radius           : 50em;
+                }
+            }
         }
     }
 }

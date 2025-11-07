@@ -475,6 +475,24 @@
 
                                 .col-wrapper-inner {
                                     @include col-6;
+
+                                    .col-outer {
+                                        @include col-12;
+
+                                        .col-inner {
+                                            &:nth-child(1) {
+                                                @include col-4;
+
+                                                @include pr-0;
+                                            }
+
+                                            &:nth-child(2) {
+                                                @include col-8;
+
+                                                @include pl-4;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             
@@ -485,27 +503,15 @@
                             }
 
                             .content-text {
-                                .col-text-outer {
-                                    @include col-12;
-
-                                    .col-text-inner {
-                                        &:nth-child(1) {
-                                            @include col-4;
-
-                                            @include pr-0;
-                                        }
-
-                                        &:nth-child(2) {
-                                            @include col-8;
-
-                                            @include pl-4;
-                                        }
+                                .title {
+                                    .text-title {
+                                        font-size           : calc(170 / var(--vw) * var(--multiplier));
                                     }
                                 }
 
-                                .title {
-                                    .text-title {
-                                        font-size           : calc(150 / var(--vw) * var(--multiplier));
+                                .desc {
+                                    .text-description {
+                                        font-size           : calc(20 / var(--vw) * var(--multiplier));
                                     }
                                 }
                             }
@@ -569,7 +575,9 @@
                                     }
 
                                     &:nth-child(2) {
-                                        @include col-1;
+                                        @include col-2;
+
+                                        @include pr-2;
                                     }
                                 }
                             }
@@ -641,6 +649,10 @@
                                 }
                             }
 
+                            .content-button {
+                                @include text-align-right;
+                            }
+
                             &:hover {
                                 .content-image {
                                     .image {
@@ -696,6 +708,8 @@
 
                                                 &:nth-child(2) {
                                                     @include col-1;
+
+                                                    @include pr-2;
                                                 }
                                             }
                                         }
@@ -742,6 +756,10 @@
                                                     font-size               : calc(16 / var(--vw) * var(--multiplier));
                                                 }
                                             }
+                                        }
+
+                                        .list-button {
+                                            @include text-align-right;
                                         }
                                     }
                                 }

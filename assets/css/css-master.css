@@ -10766,13 +10766,16 @@ a ::before, a ::after, button ::before, button ::after {
 .btn-default > span {
   display: flex;
   align-items: center;
+  padding-top: calc(10 / var(--vw) * var(--multiplier)) !important;
+  padding-bottom: calc(10 / var(--vw) * var(--multiplier)) !important;
+  padding-left: calc(20 / var(--vw) * var(--multiplier)) !important;
+  padding-right: calc(20 / var(--vw) * var(--multiplier)) !important;
   justify-content: center;
-  padding: calc(20 / var(--vw) * var(--multiplier)) calc(50 / var(--vw) * var(--multiplier));
 }
-.btn-default > span > span {
+.btn-default > span span {
   position: relative;
 }
-.btn-default > span > span.icon {
+.btn-default > span span.icon {
   display: inline-flex;
   align-items: center;
   margin-left: calc(10 / var(--vw) * var(--multiplier)) !important;
@@ -10780,230 +10783,287 @@ a ::before, a ::after, button ::before, button ::after {
   justify-content: center;
   width: 1.65rem;
 }
-.btn-default > span > span.icon > span {
+.btn-default > span span.icon > span {
   position: relative;
   display: inline-flex;
   overflow: hidden;
 }
-.btn-default > span > span.icon > span > i:nth-child(2) {
+.btn-default > span span.icon > span > i:nth-child(2) {
   position: absolute;
   left: -105%;
 }
-.btn-default > span > span.text {
+.btn-default > span span.icon svg {
+  width: calc(22.5 / var(--vw) * var(--multiplier));
+  height: calc(22.5 / var(--vw) * var(--multiplier));
+}
+.btn-default > span span.text, .btn-default > span span.time {
   display: block;
   overflow: hidden;
 }
-.btn-default > span > span.text > span {
+.btn-default > span span.text > span, .btn-default > span span.time > span {
   display: block;
 }
-.btn-default > span > span.text > span:nth-child(2) {
+.btn-default > span span.text > span:nth-child(2), .btn-default > span span.time > span:nth-child(2) {
   position: absolute;
   top: 100%;
 }
-.btn-default > span > span.text > span > span {
+.btn-default > span span.text > span > span, .btn-default > span span.time > span > span {
   display: inline-block;
   white-space: pre;
 }
-.btn-default > span > span.text > span > span:nth-child(1) {
+.btn-default > span span.text > span > span:nth-child(1), .btn-default > span span.time > span > span:nth-child(1) {
   transition-delay: 0s;
 }
-.btn-default > span > span.text > span > span:nth-child(2) {
+.btn-default > span span.text > span > span:nth-child(2), .btn-default > span span.time > span > span:nth-child(2) {
   transition-delay: 0.005s;
 }
-.btn-default > span > span.text > span > span:nth-child(3) {
+.btn-default > span span.text > span > span:nth-child(3), .btn-default > span span.time > span > span:nth-child(3) {
   transition-delay: 0.01s;
 }
-.btn-default > span > span.text > span > span:nth-child(4) {
+.btn-default > span span.text > span > span:nth-child(4), .btn-default > span span.time > span > span:nth-child(4) {
   transition-delay: 0.015s;
 }
-.btn-default > span > span.text > span > span:nth-child(5) {
+.btn-default > span span.text > span > span:nth-child(5), .btn-default > span span.time > span > span:nth-child(5) {
   transition-delay: 0.02s;
 }
-.btn-default > span > span.text > span > span:nth-child(6) {
+.btn-default > span span.text > span > span:nth-child(6), .btn-default > span span.time > span > span:nth-child(6) {
   transition-delay: 0.025s;
 }
-.btn-default > span > span.text > span > span:nth-child(7) {
+.btn-default > span span.text > span > span:nth-child(7), .btn-default > span span.time > span > span:nth-child(7) {
   transition-delay: 0.03s;
 }
-.btn-default > span > span.text > span > span:nth-child(8) {
+.btn-default > span span.text > span > span:nth-child(8), .btn-default > span span.time > span > span:nth-child(8) {
   transition-delay: 0.035s;
 }
-.btn-default > span > span.text > span > span:nth-child(9) {
+.btn-default > span span.text > span > span:nth-child(9), .btn-default > span span.time > span > span:nth-child(9) {
   transition-delay: 0.04s;
 }
-.btn-default > span > span.text > span > span:nth-child(10) {
+.btn-default > span span.text > span > span:nth-child(10), .btn-default > span span.time > span > span:nth-child(10) {
   transition-delay: 0.045s;
 }
-.btn-default > span > span.text > span > span:nth-child(11) {
+.btn-default > span span.text > span > span:nth-child(11), .btn-default > span span.time > span > span:nth-child(11) {
   transition-delay: 0.05s;
 }
-.btn-default > span > span.text > span > span:nth-child(12) {
+.btn-default > span span.text > span > span:nth-child(12), .btn-default > span span.time > span > span:nth-child(12) {
   transition-delay: 0.055s;
 }
-.btn-default > span > span.text > span > span:nth-child(13) {
+.btn-default > span span.text > span > span:nth-child(13), .btn-default > span span.time > span > span:nth-child(13) {
   transition-delay: 0.06s;
 }
-.btn-default > span > span.text > span > span:nth-child(14) {
+.btn-default > span span.text > span > span:nth-child(14), .btn-default > span span.time > span > span:nth-child(14) {
   transition-delay: 0.065s;
 }
-.btn-default > span > span.text > span > span:nth-child(15) {
+.btn-default > span span.text > span > span:nth-child(15), .btn-default > span span.time > span > span:nth-child(15) {
   transition-delay: 0.07s;
 }
-.btn-default > span > span.text > span > span:nth-child(16) {
+.btn-default > span span.text > span > span:nth-child(16), .btn-default > span span.time > span > span:nth-child(16) {
   transition-delay: 0.075s;
 }
-.btn-default > span > span.text > span > span:nth-child(17) {
+.btn-default > span span.text > span > span:nth-child(17), .btn-default > span span.time > span > span:nth-child(17) {
   transition-delay: 0.08s;
 }
-.btn-default > span > span.text > span > span:nth-child(18) {
+.btn-default > span span.text > span > span:nth-child(18), .btn-default > span span.time > span > span:nth-child(18) {
   transition-delay: 0.085s;
 }
-.btn-default > span > span.text > span > span:nth-child(19) {
+.btn-default > span span.text > span > span:nth-child(19), .btn-default > span span.time > span > span:nth-child(19) {
   transition-delay: 0.09s;
 }
-.btn-default > span > span.text > span > span:nth-child(20) {
+.btn-default > span span.text > span > span:nth-child(20), .btn-default > span span.time > span > span:nth-child(20) {
   transition-delay: 0.095s;
 }
-.btn-default > span > span.text > span > span:nth-child(21) {
+.btn-default > span span.text > span > span:nth-child(21), .btn-default > span span.time > span > span:nth-child(21) {
   transition-delay: 0.1s;
 }
-.btn-default > span > span.text > span > span:nth-child(22) {
+.btn-default > span span.text > span > span:nth-child(22), .btn-default > span span.time > span > span:nth-child(22) {
   transition-delay: 0.105s;
 }
-.btn-default > span > span.text > span > span:nth-child(23) {
+.btn-default > span span.text > span > span:nth-child(23), .btn-default > span span.time > span > span:nth-child(23) {
   transition-delay: 0.11s;
 }
-.btn-default > span > span.text > span > span:nth-child(24) {
+.btn-default > span span.text > span > span:nth-child(24), .btn-default > span span.time > span > span:nth-child(24) {
   transition-delay: 0.115s;
 }
-.btn-default > span > span.text > span > span:nth-child(25) {
+.btn-default > span span.text > span > span:nth-child(25), .btn-default > span span.time > span > span:nth-child(25) {
   transition-delay: 0.12s;
 }
-.btn-default:hover > span > span.icon > span > i:nth-child(1) {
+.btn-default:hover > span span.icon > span > i:nth-child(1) {
   transform: translateX(100%);
 }
-.btn-default:hover > span > span.icon > span > i:nth-child(2) {
+.btn-default:hover > span span.icon > span > i:nth-child(2) {
   left: 0;
 }
-.btn-default:hover > span > span.text > span:nth-child(1) > span {
+.btn-default:hover > span span.text > span:nth-child(1) > span, .btn-default:hover > span span.time > span:nth-child(1) > span {
   transform: translateY(-100%);
 }
-.btn-default:hover > span > span.text > span:nth-child(2) > span {
+.btn-default:hover > span span.text > span:nth-child(2) > span, .btn-default:hover > span span.time > span:nth-child(2) > span {
   transform: translateY(-100%);
 }
-.btn-default:hover > span > span.text > span > span:nth-child(1) {
+.btn-default:hover > span span.text > span > span:nth-child(1), .btn-default:hover > span span.time > span > span:nth-child(1) {
   transition-delay: 0s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(2) {
+.btn-default:hover > span span.text > span > span:nth-child(2), .btn-default:hover > span span.time > span > span:nth-child(2) {
   transition-delay: 0.0125s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(3) {
+.btn-default:hover > span span.text > span > span:nth-child(3), .btn-default:hover > span span.time > span > span:nth-child(3) {
   transition-delay: 0.025s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(4) {
+.btn-default:hover > span span.text > span > span:nth-child(4), .btn-default:hover > span span.time > span > span:nth-child(4) {
   transition-delay: 0.0375s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(5) {
+.btn-default:hover > span span.text > span > span:nth-child(5), .btn-default:hover > span span.time > span > span:nth-child(5) {
   transition-delay: 0.05s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(6) {
+.btn-default:hover > span span.text > span > span:nth-child(6), .btn-default:hover > span span.time > span > span:nth-child(6) {
   transition-delay: 0.0625s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(7) {
+.btn-default:hover > span span.text > span > span:nth-child(7), .btn-default:hover > span span.time > span > span:nth-child(7) {
   transition-delay: 0.075s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(8) {
+.btn-default:hover > span span.text > span > span:nth-child(8), .btn-default:hover > span span.time > span > span:nth-child(8) {
   transition-delay: 0.0875s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(9) {
+.btn-default:hover > span span.text > span > span:nth-child(9), .btn-default:hover > span span.time > span > span:nth-child(9) {
   transition-delay: 0.1s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(10) {
+.btn-default:hover > span span.text > span > span:nth-child(10), .btn-default:hover > span span.time > span > span:nth-child(10) {
   transition-delay: 0.1125s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(11) {
+.btn-default:hover > span span.text > span > span:nth-child(11), .btn-default:hover > span span.time > span > span:nth-child(11) {
   transition-delay: 0.125s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(12) {
+.btn-default:hover > span span.text > span > span:nth-child(12), .btn-default:hover > span span.time > span > span:nth-child(12) {
   transition-delay: 0.1375s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(13) {
+.btn-default:hover > span span.text > span > span:nth-child(13), .btn-default:hover > span span.time > span > span:nth-child(13) {
   transition-delay: 0.15s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(14) {
+.btn-default:hover > span span.text > span > span:nth-child(14), .btn-default:hover > span span.time > span > span:nth-child(14) {
   transition-delay: 0.1625s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(15) {
+.btn-default:hover > span span.text > span > span:nth-child(15), .btn-default:hover > span span.time > span > span:nth-child(15) {
   transition-delay: 0.175s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(16) {
+.btn-default:hover > span span.text > span > span:nth-child(16), .btn-default:hover > span span.time > span > span:nth-child(16) {
   transition-delay: 0.1875s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(17) {
+.btn-default:hover > span span.text > span > span:nth-child(17), .btn-default:hover > span span.time > span > span:nth-child(17) {
   transition-delay: 0.2s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(18) {
+.btn-default:hover > span span.text > span > span:nth-child(18), .btn-default:hover > span span.time > span > span:nth-child(18) {
   transition-delay: 0.2125s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(19) {
+.btn-default:hover > span span.text > span > span:nth-child(19), .btn-default:hover > span span.time > span > span:nth-child(19) {
   transition-delay: 0.225s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(20) {
+.btn-default:hover > span span.text > span > span:nth-child(20), .btn-default:hover > span span.time > span > span:nth-child(20) {
   transition-delay: 0.2375s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(21) {
+.btn-default:hover > span span.text > span > span:nth-child(21), .btn-default:hover > span span.time > span > span:nth-child(21) {
   transition-delay: 0.25s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(22) {
+.btn-default:hover > span span.text > span > span:nth-child(22), .btn-default:hover > span span.time > span > span:nth-child(22) {
   transition-delay: 0.2625s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(23) {
+.btn-default:hover > span span.text > span > span:nth-child(23), .btn-default:hover > span span.time > span > span:nth-child(23) {
   transition-delay: 0.275s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(24) {
+.btn-default:hover > span span.text > span > span:nth-child(24), .btn-default:hover > span span.time > span > span:nth-child(24) {
   transition-delay: 0.2875s;
 }
-.btn-default:hover > span > span.text > span > span:nth-child(25) {
+.btn-default:hover > span span.text > span > span:nth-child(25), .btn-default:hover > span span.time > span > span:nth-child(25) {
   transition-delay: 0.3s;
 }
 .btn-default.btn-solid {
-  background: none;
-  border: none;
-  border-radius: calc(0 / var(--vw) * var(--multiplier));
+  display: flex;
 }
-.btn-default.btn-solid > span:before, .btn-default.btn-solid > span:after {
-  position: absolute;
+.btn-default.btn-solid > span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   width: 100% !important;
-  height: 100% !important;
+  padding-top: calc(15 / var(--vw) * var(--multiplier)) !important;
+  padding-bottom: calc(15 / var(--vw) * var(--multiplier)) !important;
+  justify-content: space-between;
+  background: var(--color-grey-super-light);
+  border: none;
+  border-radius: 50em;
+}
+.btn-default.btn-solid > span:before {
+  position: absolute;
   content: "";
-  top: 0;
-  left: 0;
-  transform: scale(1);
+  width: 100%;
+  height: calc(75 / var(--vw) * var(--multiplier));
+  bottom: -175%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-black);
+  border-radius: 100%;
 }
-.btn-default.btn-solid:hover > span:before, .btn-default.btn-solid:hover > span:after {
-  transform: scale(0.95);
+.btn-default.btn-solid > span > span {
+  display: flex;
+  align-items: center;
 }
-.btn-default.btn-solid.btn-primary {
+.btn-default.btn-solid > span > span > span {
+  margin-right: calc(15 / var(--vw) * var(--multiplier)) !important;
+}
+.btn-default.btn-solid > span > span > span:last-child {
+  margin-right: 0 !important;
+}
+.btn-default.btn-solid > span span.icon {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.btn-default.btn-solid > span span.icon svg {
+  fill: var(--color-white);
+  mix-blend-mode: difference;
+}
+.btn-default.btn-solid > span span.text > span:nth-child(1), .btn-default.btn-solid > span span.time > span:nth-child(1) {
   color: var(--color-black);
 }
-.btn-default.btn-solid.btn-primary > span:before {
-  background: var(--color-primary);
-  box-shadow: 0 0 0 calc(2 / var(--vw) * var(--multiplier)) var(--color-black) inset;
+.btn-default.btn-solid > span span.text > span:nth-child(2), .btn-default.btn-solid > span span.time > span:nth-child(2) {
+  color: var(--color-white);
 }
-.btn-default.btn-solid.btn-secondary {
-  color: var(--color-black);
+.btn-default.btn-solid:hover > span:before {
+  height: 100% !important;
+  width: 125%;
+  bottom: 0;
+  border-radius: 50em;
 }
-.btn-default.btn-solid.btn-secondary > span:before {
-  background: var(--color-secondary);
-  box-shadow: 0 0 0 calc(2 / var(--vw) * var(--multiplier)) var(--color-black) inset;
+.btn-default.btn-icon > span {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  align-items: center;
+  padding: 0 !important;
+  justify-content: center;
+  width: calc(50 / var(--vw) * var(--multiplier));
+  height: calc(50 / var(--vw) * var(--multiplier));
+  background: var(--color-grey-super-light);
+  border-radius: 100%;
 }
-.btn-default.btn-solid.btn-light {
-  color: var(--color-black);
+.btn-default.btn-icon > span:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: calc(50 / var(--vw) * var(--multiplier));
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-black);
+  border-radius: 100%;
 }
-.btn-default.btn-solid.btn-light > span:before {
-  background: var(--color-white);
-  box-shadow: 0 0 0 calc(2 / var(--vw) * var(--multiplier)) var(--color-black) inset;
+.btn-default.btn-icon > span span.icon svg {
+  mix-blend-mode: difference;
+  fill: var(--color-white);
 }
+.btn-default.btn-icon:hover > span:before {
+  height: 100% !important;
+  width: 125%;
+  bottom: 0;
+  border-radius: 50em;
+}
+
 .link-default {
   position: relative;
   display: inline-block;
@@ -11649,10 +11709,7 @@ a ::before, a ::after, button ::before, button ::after {
   flex: 0 0 50%;
   max-width: 50%;
 }
-.wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .content-image .image {
-  overflow: hidden;
-}
-.wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .content-text .col-text-outer {
+.wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .col-wrapper-outer .col-wrapper-inner .col-outer {
   position: relative;
   width: 100%;
   min-height: 1%;
@@ -11662,7 +11719,7 @@ a ::before, a ::after, button ::before, button ::after {
   flex: 0 0 100%;
   max-width: 100%;
 }
-.wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .content-text .col-text-outer .col-text-inner:nth-child(1) {
+.wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .col-wrapper-outer .col-wrapper-inner .col-outer .col-inner:nth-child(1) {
   position: relative;
   width: 100%;
   min-height: 1%;
@@ -11673,7 +11730,7 @@ a ::before, a ::after, button ::before, button ::after {
   max-width: 33.33333%;
   padding-right: 0 !important;
 }
-.wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .content-text .col-text-outer .col-text-inner:nth-child(2) {
+.wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .col-wrapper-outer .col-wrapper-inner .col-outer .col-inner:nth-child(2) {
   position: relative;
   width: 100%;
   min-height: 1%;
@@ -11684,8 +11741,14 @@ a ::before, a ::after, button ::before, button ::after {
   max-width: 66.66667%;
   padding-left: calc(20 / var(--vw) * var(--multiplier)) !important;
 }
+.wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .content-image .image {
+  overflow: hidden;
+}
 .wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .content-text .title .text-title {
-  font-size: calc(150 / var(--vw) * var(--multiplier));
+  font-size: calc(170 / var(--vw) * var(--multiplier));
+}
+.wizard .theme.podcast-highlight.primary .podcast-highlight-content .content-wrapper.primary .content-text .desc .text-description {
+  font-size: calc(20 / var(--vw) * var(--multiplier));
 }
 .wizard .theme.podcast-list.primary .container {
   max-width: 100% !important;
@@ -11751,9 +11814,10 @@ a ::before, a ::after, button ::before, button ::after {
   min-height: 1%;
   padding: 0 calc(15 / var(--vw) * var(--multiplier));
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 8.33333%;
-  flex: 0 0 8.33333%;
-  max-width: 8.33333%;
+  -ms-flex: 0 0 16.66667%;
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+  padding-right: calc(10 / var(--vw) * var(--multiplier)) !important;
 }
 .wizard .theme.podcast-list.primary .podcast-list-content .content-wrapper.primary .content-image {
   overflow: hidden;
@@ -11817,6 +11881,9 @@ a ::before, a ::after, button ::before, button ::after {
 .wizard .theme.podcast-list.primary .podcast-list-content .content-wrapper.primary .content-text .desc .text-description {
   font-size: calc(16 / var(--vw) * var(--multiplier));
 }
+.wizard .theme.podcast-list.primary .podcast-list-content .content-wrapper.primary .content-button {
+  text-align: right;
+}
 .wizard .theme.podcast-list.primary .podcast-list-content .content-wrapper.primary:hover .content-image .image > a img {
   filter: saturate(1);
   transform: translateY(-50%) scale(1.025);
@@ -11865,6 +11932,7 @@ a ::before, a ::after, button ::before, button ::after {
   -ms-flex: 0 0 8.33333%;
   flex: 0 0 8.33333%;
   max-width: 8.33333%;
+  padding-right: calc(10 / var(--vw) * var(--multiplier)) !important;
 }
 .wizard .theme.podcast-list.primary .podcast-list-footer .footer-list > ul > li .list-wrapper.primary .list-text .col-text-outer {
   position: relative;
@@ -11919,6 +11987,9 @@ a ::before, a ::after, button ::before, button ::after {
 }
 .wizard .theme.podcast-list.primary .podcast-list-footer .footer-list > ul > li .list-wrapper.primary .list-text .desc .text-description {
   font-size: calc(16 / var(--vw) * var(--multiplier));
+}
+.wizard .theme.podcast-list.primary .podcast-list-footer .footer-list > ul > li .list-wrapper.primary .list-button {
+  text-align: right;
 }
 
 /*# sourceMappingURL=css-master.css.map */
